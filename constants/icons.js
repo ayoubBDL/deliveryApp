@@ -50,4 +50,4 @@ export default {
     star,
     sushi,
     user,
-}
+};
