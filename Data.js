@@ -73,7 +73,7 @@ export const expensive = 3
 export const restaurantData = [
     {
         id: 1,
-        name: "ByProgrammers Burger",
+        name: "Ayoub Burger",
         rating: 4.8,
         categories: [ 5, 7 ],
         priceRating: affordable,
@@ -116,7 +116,7 @@ export const restaurantData = [
     },
     {
         id: 2,
-        name: "ByProgrammers Pizza",
+        name: "Ayoub Pizza",
         rating: 4.8,
         categories: [ 2, 4, 6 ],
         priceRating: expensive,
@@ -167,7 +167,7 @@ export const restaurantData = [
     },
     {
         id: 3,
-        name: "ByProgrammers Hotdogs",
+        name: "Ayoub Hotdogs",
         rating: 4.8,
         categories: [ 3 ],
         priceRating: expensive,
@@ -194,7 +194,7 @@ export const restaurantData = [
     },
     {
         id: 4,
-        name: "ByProgrammers Sushi",
+        name: "Ayoub Sushi",
         rating: 4.8,
         categories: [ 8 ],
         priceRating: expensive,
@@ -221,7 +221,7 @@ export const restaurantData = [
     },
     {
         id: 5,
-        name: "ByProgrammers Cuisine",
+        name: "Ayoub Cuisine",
         rating: 4.8,
         categories: [ 1, 2 ],
         priceRating: affordable,
@@ -274,7 +274,7 @@ export const restaurantData = [
     {
 
         id: 6,
-        name: "ByProgrammers Dessets",
+        name: "Ayoub Dessets",
         rating: 4.9,
         categories: [ 9, 10 ],
         priceRating: affordable,
