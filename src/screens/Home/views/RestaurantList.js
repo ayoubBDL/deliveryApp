@@ -1,16 +1,19 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, Image, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 
 import { COLORS, icons, images, SIZES, FONTS } from '../../../../constants';
 
 
-export default function RestaurantList ({ restaurants, getCategoryNameById }) {
+export default function RestaurantList ({ restaurants, getCategoryNameById, navigation, currentLocation }) {
 
     const renderItem = ({ item }) => {
         return (
             <TouchableOpacity
                 style={{ marginBottom: SIZES.padding * 2 }}
-            // onPress={()=> navigation.navigate('restaurants')}
+                onPress={() => navigation.navigate('Restaurant'), {
+                    item,
+                    currentLocation
+                }}
             >
 
                 <View style={{ marginBottom: SIZES.padding }}>
@@ -123,3 +126,20 @@ export default function RestaurantList ({ restaurants, getCategoryNameById }) {
         />
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: COLORS.lightGray4
+    },
+    shadow: {
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 3,
+        elevation: 1,
+    }
+})

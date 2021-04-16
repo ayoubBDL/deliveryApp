@@ -4,13 +4,13 @@ import { View, Text, Image, SafeAreaView, StyleSheet, TouchableOpacity, FlatList
 
 import { COLORS, icons, images, SIZES, FONTS } from '../../../constants';
 
-import { initialCurrentLocation, categoryData, affordable, fairPrice, expensive, restaurantData } from '../../Data'
+import { initialCurrentLocation, categoryData, affordable, fairPrice, expensive, restaurantData } from '../../../Data'
+
 import Header from './views/Header';
 import MainCategories from './views/MainCategories';
-
 import RestaurantList from './views/RestaurantList'
 
-function Home () {
+function Home ({ navigation }) {
 
     const [ categories, setCategories ] = useState(categoryData)
     const [ selectedCategory, setSelectedCategory ] = useState(null)
@@ -37,7 +37,7 @@ function Home () {
         <SafeAreaView style={styles.container}>
             <Header currentLocation={currentLocation} />
             <MainCategories categories={categories} onSelectCategory={onSelectCategory} selectedCategory={selectedCategory} />
-            <RestaurantList restaurants={restaurants} getCategoryNameById={getCategoryNameById} />
+            <RestaurantList restaurants={restaurants} getCategoryNameById={getCategoryNameById} navigation={navigation} currentLocation={currentLocation} />
         </SafeAreaView>
     );
 }
